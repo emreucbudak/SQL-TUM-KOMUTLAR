@@ -1,0 +1,60 @@
+--CREATE TABLE TABLOISMI (
+--	HÜCRE ÝSÝMLERÝ ARADA , OLACAK ÞEKÝLDE AYIRIRSAN TABLO OLUÞTURUR
+--)
+--ALTER TABLE TABLO DROP COLUMN HÜCRE ADI HÜCRE BÖLÜMÜ SÝLER
+--ALTER TABLE TABLO ADD HÜCRE ADI VERÝ TÝPÝ ÞEKLÝNDE GÝRÝLÝRSE TABLOYA VERÝ EKLER 
+--SELECT * FROM TBLDERSLER TBLDERSLER TABLOSUNDAN TÜM VERÝLERÝ ÇEKER
+--insert into tablo adý (hücre adlarý sýrasýyla) values (deðerler)
+--delete from tablo adý where  (where sorgusu istenen verinin bulunmasýný saðlar) genelde id adý kullanýlýr id hücresi adý = deger
+--truncate table tablo adý tüm verileri silir
+--update tablo adý set hücre adý = güncellemek istediðin veri where genelde id kullanýlýr id = int x örneðin where sorgusu olmazsa tüm  verileri günceller
+--sum toplam count adet sayýsý min max kelime anlamlarýyla ayný avg ortalama alýr
+--select secmek istedigin veri as hücrenin adý from tablo adý group by nerye göre gruplamak istediðin
+--groupla ayný sonuna sadece having  þart koyuyorsun neye sahip olaný almak istiyorsan
+--LÝKE % VE _ DESTEKLER VE WHERE SORGUUSA ÖZEL FÝLTRELEMELER KATMAK ÝÇÝN KULLANILIR LIKE 'Ali%'; Bu sorgu, Ad sütununda 'Ali' ile baþlayan tüm müþterileri listeler.
+--'%Telefon';Bu sorgu, Ad sütununda 'Telefon' ile biten tüm ürünleri listeler.
+--LIKE '%indirim%';Bu sorgu, Açýklama sütununda 'indirim' kelimesi geçen tüm sipariþleri listeler.
+--LIKE 'uye_1___';Bu sorgu, KullanýcýAdý sütununda 
+--'uye_1' ile baþlayýp ardýndan 3 adet herhangi bir karakter içeren tüm üyeleri listeler.
+--DÝSTÝNCT SAYISI ÝSTENEN BÝR ÖÐEDE ALINAN VERÝLERÝN SAYILARININ BENZERSÝZ YANÝ SAÐLANAN VERÝLERDE 5 TANE AYNI VARSA 1 TANESÝNÝ ALIR
+--ORDER BY NEYE GÖRE SIRALAYACAGIMIZI YAZAR HÜCRE ADI VEYA SAYI VS DÝYEBÝLÝRÝZ DESC TERSDEN SIRALAR ASC DÜZ SIRALAR
+--TOP SAYI VERÝLEN SAYIDA BAÞTAN O SAYIYA KADAR OLAN SIRALAMADAKÝ VERÝLERÝ ALIR PERCENT O VERÝ TABLOSUNDA ÝSTENEN VERÝLEÝN VERÝLEN YÜZDESÝNE KARÞILIK GELEN ÖÐELERÝ ALIR
+--in(degerler) where sorgusundan cok daha pratiktir or kullanýmýndan kurtarýr where sorgusunda kullanýlabilir in not da tam tersi bulunmayanlarý alýr
+--between gene where sorgusunda yazýlýr iki deðer arasýndaki verileri getir harflerdede iþe yarar
+--INNER JOIN: Ýki tabloda ortak olan satýrlarý birleþtirir. Yani, her iki tabloda da eþleþen deðerlerin olduðu satýrlarý getirir.
+--LEFT JOIN: Sol tabloda bulunan tüm satýrlarý ve sað tabloda eþleþen satýrlarý getirir. Sol tabloda olup sað tabloda olmayan satýrlar için sað tablodaki sütunlar NULL deðerini alýr.
+--RIGHT JOIN: Sað tabloda bulunan tüm satýrlarý ve sol tabloda eþleþen satýrlarý getirir. Sað tabloda olup sol tabloda olmayan satýrlar için sol tablodaki sütunlar NULL deðerini alýr.
+--FULL OUTER JOIN: Her iki tabloda bulunan tüm satýrlarý getirir. Eþleþmeyen satýrlar için diðer tablodaki sütunlar NULL deðerini alýr.
+--SELECT Müþteriler.Ad, Müþteriler.Soyad, Sipariþler.Ürün, Sipariþler.Miktar
+--FROM Müþteriler
+--INNER JOIN Sipariþler ON Müþteriler.MüþteriID = Sipariþler.MüþteriID;
+--SELECT Müþteriler.Ad, Müþteriler.Soyad, Sipariþler.Ürün
+--FROM Müþteriler
+--LEFT JOIN Sipariþler ON Müþteriler.MüþteriID = Sipariþler.MüþteriID;
+--SELECT Müþteriler.Ad, Müþteriler.Soyad, Sipariþler.Ürün
+--FROM Müþteriler
+--RIGHT JOIN Sipariþler ON Müþteriler.MüþteriID = Sipariþler.MüþteriID;
+--SELECT Müþteriler.Ad, Müþteriler.Soyad, Sipariþler.Ürün
+--FROM Müþteriler
+--FULL OUTER JOIN Sipariþler ON Müþteriler.MüþteriID = Sipariþler.MüþteriID;
+--alt sorgular where þartý için yeni selectli sorgulardýr
+--aritmetik iþlemlerde normal iþlem gibi 20+4 yazabilirsin sonucu 24 olaný gösterir
+--abs mutlak deðer demektir
+--select power üs almadýr sqrt karekök almadýr
+--upper lower kelimenin harflerini büyütme ve küçültme olarak kullanýlýr
+--substring parçalama için kullanýlýr verilen karakterden istenilen karaktere kadar olan kýsmý alýr
+--left right saðdan soldan kelime seçimine yarar
+--len karakter uzunlugunu verir
+--charindex belirtilen harfin kaçýncý indexte olduðunu öðrenmek için kullanýlýr
+--create procedure isim as tablo adý ve iþlemler
+--Bir prosedürü silmek için DROP PROCEDURE komutu kullanýlýr.
+--DROP PROCEDURE prosedür_adý;
+---- Mevcut prosedürü silme
+--DROP PROCEDURE hesapla_ortalama;
+
+---- Yeni prosedürü oluþturma
+--CREATE PROCEDURE hesapla_ortalama
+--AS
+--BEGIN
+--    -- Yeni güncellenmiþ kodlar burada
+--END
